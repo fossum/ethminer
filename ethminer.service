@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 User=miner
 WorkingDirectory=/opt/etherminer/
-ExecStart=/opt/etherminer/ethminer --stratum-protocol 1 --verbosity 0 --farm-recheck 200 --opencl --stratum us2.ethermine.org:4444 --stratum-failover us1.ethermine.org:4444 --userpass 0x9A07458BB6ef16E0dc901424BAC5dc4FcFd6c23B.maverick
+ExecStart=/opt/etherminer/ethminer --stratum-protocol 1 --verbosity 0 --farm-recheck 200 --cuda --stratum us2.ethermine.org:4444 --stratum-failover us1.ethermine.org:4444 --userpass 0x9A07458BB6ef16E0dc901424BAC5dc4FcFd6c23B.maverick
 Environment=GPU_FORCE_64BIT_PTR=0 GPU_MAX_HEAP_SIZE=100 GPU_USE_SYNC_OBJECTS=1 GPU_MAX_ALLOC_PERCENT=100 GPU_SINGLE_ALLOC_PERCENT=100
 Restart=always
 RestartSec=5
